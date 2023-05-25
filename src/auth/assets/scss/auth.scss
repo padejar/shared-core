@@ -1,0 +1,120 @@
+@import "../../../common/assets/scss/variables";
+
+.auth-page {
+  background-image: url("../../assets/images/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-form {
+  .card {
+    border-radius: 15px;
+    border: unset;
+    -webkit-box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+
+    .card-header {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: unset;
+      background: $quest-navy;
+      border-color: $quest-navy;
+      padding: 0.8rem 1.25rem;
+
+      .logo {
+        height: 106px;
+      }
+    }
+
+    .quest-button {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    label {
+      color: #1a0352;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .form-control {
+      height: 50px;
+      width: 100%;
+      max-width: 280px;
+      border-style: solid;
+      border-width: 1px !important;
+      border-color: #c4c4c4;
+      border-radius: 25px;
+      margin: 0 auto 5px;
+      padding: 10px 25px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #777;
+    }
+
+    .big-field {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      margin: auto;
+      &.has-icon {
+        .form-control {
+          padding-left: 40px;
+        }
+        svg,
+        img,
+        i {
+          position: absolute;
+          color: #c4c4c4;
+          left: 12px;
+          top: 12px;
+        }
+
+        svg {
+          height: 23px;
+          width: 23px;
+        }
+
+        img {
+          height: 24px;
+          width: 24px;
+        }
+
+        i::before {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .need-help {
+      font-size: 16px;
+      display: block;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      color: $quest-navy;
+    }
+
+    .need-help-details {
+      font-size: 12px;
+      color: $quest-navy;
+    }
+
+    a {
+      text-decoration: underline;
+      font-size: 12px;
+      color: $quest-navy;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .auth-form {
+    .card {
+      .form-group {
+        .input-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

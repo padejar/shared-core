@@ -1,0 +1,17 @@
+import { Dictionary } from "../../common/types/Dictionary";
+
+export enum GLASS_GUIDE_MODEL_TYPE_CODES {
+  ALL = "A",
+  VEHICLE_PASSENGER = "APAS",
+  VEHICLE_LIGHT_COMMERCIAL = "ALCV",
+  VEHICLE_HEAVY_COMMERCIAL = "AHCV",
+}
+
+export const GLASS_GUIDE_ACTIVE_MODEL_TYPE_CODE_LABELS: Dictionary = {
+  [GLASS_GUIDE_MODEL_TYPE_CODES.ALL]: "All",
+  [GLASS_GUIDE_MODEL_TYPE_CODES.VEHICLE_PASSENGER]: "Passenger vehicle",
+  [GLASS_GUIDE_MODEL_TYPE_CODES.VEHICLE_LIGHT_COMMERCIAL]:
+    "Light commercial vehicle",
+  [GLASS_GUIDE_MODEL_TYPE_CODES.VEHICLE_HEAVY_COMMERCIAL]:
+    "Heavy commercial vehicle",
+};

@@ -1,0 +1,38 @@
+@import "../../common/assets/scss/variables";
+
+.security-details-buttons {
+  .btn {
+    border: none;
+    display: inline-block;
+    margin-right: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: $quest-navy;
+    margin-bottom: 0;
+    background-color: $quest-light-grey;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: $quest-navy;
+    }
+
+    &.disabled {
+      opacity: 0.75;
+      cursor: not-allowed;
+    }
+
+    &.selected {
+      color: $quest-navy;
+      background-color: $quest-green;
+    }
+  }
+}

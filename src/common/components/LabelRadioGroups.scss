@@ -1,0 +1,39 @@
+@import "../assets/scss/variables";
+
+.quest-label-radio-groups {
+  .quest-label-radio-container {
+    display: inline-block;
+    margin-right: 0.5rem;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    label {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: $quest-navy;
+      margin-bottom: 0;
+      background-color: $quest-light-grey;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: color 0.3s, background-color 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $quest-navy;
+      }
+
+      &.disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+      }
+    }
+
+    input:checked ~ label {
+      color: $quest-navy;
+      background-color: $quest-green;
+    }
+  }
+}

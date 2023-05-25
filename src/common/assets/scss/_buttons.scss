@@ -1,0 +1,254 @@
+.quest-button {
+  display: inline-block;
+  border: 2px solid $quest-navy;
+  background-color: $quest-navy;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  height: 38px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  padding: 0.3rem 0.9rem;
+  border-radius: 1.5rem;
+  min-width: 82px;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.big {
+    min-width: 150px;
+    height: 50px;
+    font-size: 18px;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .disabled,
+  &:disabled,
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  div {
+    display: inline-block;
+    margin-left: 0.1rem;
+    svg {
+      path {
+        fill: #fff;
+        transition: fill 0.3s;
+      }
+    }
+  }
+
+  &:hover,
+  &.hover {
+    background-color: transparent;
+    color: $quest-navy;
+    text-decoration: none;
+
+    div {
+      svg {
+        path {
+          fill: $quest-navy;
+          transition: fill 0.3s;
+        }
+      }
+    }
+  }
+
+  &.no-hover {
+    border: 2px solid $quest-navy;
+    background-color: $quest-navy;
+    color: #fff;
+
+    div {
+      svg {
+        path {
+          fill: #fff;
+          transition: fill 0.3s;
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 2px solid $quest-navy;
+    color: $quest-navy;
+
+    div {
+      svg {
+        path {
+          fill: $quest-navy;
+          transition: fill 0.3s;
+        }
+      }
+    }
+
+    &:hover,
+    &.hover {
+      background-color: $quest-navy;
+      color: #fff;
+      text-decoration: none;
+
+      div {
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    &.no-hover {
+      border: 2px solid $quest-navy;
+      background-color: transparent;
+      color: $quest-navy;
+
+      div {
+        svg {
+          path {
+            fill: $quest-navy;
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  &.transparent {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    div {
+      svg {
+        path {
+          fill: #fff;
+          transition: fill 0.3s ease;
+        }
+      }
+    }
+
+    &:hover,
+    &.hover {
+      background-color: #fff;
+      color: $quest-navy;
+      text-decoration: none;
+
+      div {
+        svg {
+          path {
+            fill: $quest-red;
+          }
+        }
+      }
+    }
+
+    &.no-hover {
+      border: 2px solid #fff;
+      background-color: transparent;
+      color: #fff;
+
+      div {
+        svg {
+          path {
+            fill: #fff;
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  &.commit {
+    background-color: $quest-green;
+    border: 2px solid $quest-green;
+    color: $quest-navy;
+
+    div {
+      svg {
+        path {
+          fill: $quest-navy;
+          transition: fill 0.3s ease;
+        }
+      }
+    }
+
+    &:hover,
+    &.hover {
+      background-color: #fff;
+      color: $quest-green;
+      text-decoration: none;
+      div {
+        svg {
+          path {
+            fill: $quest-green;
+          }
+        }
+      }
+    }
+
+    &.no-hover {
+      background-color: $quest-green;
+      border: 2px solid $quest-green;
+      color: $quest-navy;
+
+      div {
+        svg {
+          path {
+            fill: $quest-navy;
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  &.cta {
+    background-color: $quest-red;
+    border: 2px solid $quest-red;
+    color: #fff;
+
+    div {
+      svg {
+        path {
+          fill: #fff;
+          transition: fill 0.3s ease;
+        }
+      }
+    }
+
+    &:hover,
+    &.hover {
+      background-color: #fff;
+      color: $quest-red;
+      text-decoration: none;
+
+      div {
+        svg {
+          path {
+            fill: $quest-red;
+          }
+        }
+      }
+    }
+
+    &.no-hover {
+      background-color: $quest-red;
+      border: 2px solid $quest-red;
+      color: #fff;
+
+      div {
+        svg {
+          path {
+            fill: #fff;
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../common/assets/scss/variables";
+
+.quote-output-container {
+  border: 6px solid $quest-green;
+  background-color: $quest-green;
+  border-radius: 15px;
+  position: sticky;
+  top: 6rem;
+  margin-bottom: 20px;
+  z-index: 1;
+
+  .container-arrow {
+    content: "";
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    background: $quest-green;
+    top: 50%;
+    left: -25px;
+    width: 28.1px;
+    height: 28.1px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .quote-output-inner {
+    padding: 20px 34px;
+    color: $quest-navy;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 15px;
+    .row {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+      .label {
+        font-weight: 300;
+        .popover-info {
+          height: 14px;
+          width: 14px;
+          font-size: 11px;
+        }
+      }
+      .value {
+        font-weight: 600;
+        text-align: right;
+        font-family: "Open Sans Regular";
+      }
+    }
+  }
+}
+
+.react-tiny-popover-container {
+  z-index: 2;
+}

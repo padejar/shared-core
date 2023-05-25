@@ -1,0 +1,19 @@
+.loading-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow-x: hidden;
+
+  .overlay-text {
+    position: relative;
+    top: 50%;
+    transform: translatY(-50%, -50%);
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+}

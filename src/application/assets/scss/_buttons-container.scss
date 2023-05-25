@@ -1,0 +1,23 @@
+.buttons-container {
+  .buttons-container-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .buttons-container {
+    .buttons-container-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

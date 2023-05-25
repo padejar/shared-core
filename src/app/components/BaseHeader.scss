@@ -1,0 +1,37 @@
+@import "../../common/assets/scss/variables";
+
+.header-search-container {
+  padding: 0 20px;
+  form {
+    width: 100%;
+    position: relative;
+    &::after {
+      content: url("../../common/assets/images/icon-search.svg");
+      position: absolute;
+      right: 8px;
+      top: 9px;
+    }
+    .form-control {
+      padding-right: 33px;
+    }
+
+    .search-button-submit {
+      position: absolute;
+      visibility: hidden;
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .header-search-container {
+    min-width: unset;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-search-container {
+    min-width: 40rem;
+  }
+}

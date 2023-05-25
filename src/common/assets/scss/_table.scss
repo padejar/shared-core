@@ -1,0 +1,9 @@
+.quest-responsive-table-container {
+  overflow-x: scroll;
+}
+
+@media (min-width: 576px) {
+  .quest-responsive-table-container {
+    overflow-x: visible;
+  }
+}

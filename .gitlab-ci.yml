@@ -1,0 +1,36 @@
+image: node:14
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm/
+
+before_script:
+  - npm ci --cache .npm --prefer-offline
+
+stages:
+  - tests
+  - release
+
+tests:
+  stage: tests
+  variables:
+    REACT_APP_WEBSITE_URL: https://quest.finance
+  script:
+    - npm test -- --coverage
+  only:
+    - master
+    - next
+    - merge_requests
+
+publish:
+  when: on_success
+  stage: release
+  script:
+    - npm run compile
+    - npm run semantic-release
+  only:
+    - master
+    - next
+  dependencies:
+    - tests

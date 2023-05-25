@@ -1,0 +1,52 @@
+@import "../../common/assets/scss/variables";
+
+.qst-notif {
+  &.toaster-top-full {
+    width: auto;
+    left: 50%;
+    right: initial;
+    transform: translate(-50%, 0);
+
+    .toast {
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .qst-notif {
+    &-success {
+      background-color: #d1e7dd;
+      border-color: #badbcc;
+    }
+    &-info {
+      background-color: #cff4fc;
+      border-color: #b6effb;
+    }
+    &-danger {
+      background-color: #f8d7da;
+      border-color: #f5c2c7;
+    }
+    &-warning {
+      background-color: #fff3cd;
+      border-color: #ffecb5;
+    }
+  }
+
+  .toast-body .close {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 10px;
+    outline: none;
+  }
+  .closable {
+    .toast-body {
+      padding-right: 1.5rem;
+      .close {
+        display: block;
+      }
+    }
+  }
+}

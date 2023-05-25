@@ -1,0 +1,33 @@
+@import "../../../common/assets/scss/variables";
+
+.quest-nav-link {
+  .chevron {
+    display: inline-block;
+    svg {
+      width: 10px;
+      height: 10px;
+      transform: rotate(90deg);
+      path {
+        fill: $quest-navy;
+        transition: fill 0.3s ease;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  &::after {
+    content: none !important;
+  }
+}
+
+.application-table {
+  border: 1px solid#C4C4C4;
+  border-radius: 10px !important;
+}

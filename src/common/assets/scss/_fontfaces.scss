@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Fibra One Alt Light";
+  src: url("../fonts/FibraOneAlt-Light.woff2") format("woff2"),
+    url("../fonts/FibraOneAlt-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fibra One Alt Semi Bold";
+  src: url("../fonts/FibraOneAlt-SemiBold.woff2") format("woff2"),
+    url("../fonts/FibraOneAlt-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Street Magic";
+  src: url("../fonts/Street-Magic.woff2") format("woff2"),
+    url("../fonts/Street-Magic.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

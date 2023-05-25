@@ -1,0 +1,131 @@
+@import "../../../../common/assets/scss/variables";
+@import "../../../assets/scss/popover-info";
+
+.contracts {
+  .document-options {
+    .custom-checkbox {
+      padding-left: 2.5rem !important;
+      .custom-control-label {
+        &::before {
+          left: -2rem;
+        }
+        &::after {
+          left: -2rem;
+        }
+      }
+    }
+  }
+
+  .generate-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .generate-buttons {
+      height: 63px;
+      min-width: 220px;
+      border-radius: 33px;
+      margin-bottom: 1.5rem;
+      margin-right: 0;
+    }
+  }
+
+  .table-title {
+    vertical-align: middle;
+
+    img {
+      margin-right: 1.15rem;
+    }
+  }
+
+  .table {
+    > thead {
+      > tr {
+        > th {
+          font-size: 14px !important;
+          background-color: $quest-light-blue;
+          border-top: none;
+          border-bottom: none;
+          color: $quest-navy;
+          &:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 55%;
+          }
+          &:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        border-color: #e5e5e5;
+        > td {
+          font-size: 14px !important;
+          background-color: #fff;
+          color: $quest-navy;
+          border-top: none;
+          border-bottom: 1px solid #e5e5e5;
+
+          .action-container {
+            display: flex;
+            justify-content: space-between;
+            .download {
+              color: #3cc13b;
+              font-weight: 600;
+              text-decoration: underline;
+              padding: 0;
+            }
+            .delete-button {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-color: #555555;
+  }
+
+  .approval-conditions {
+    ul {
+      padding-left: 15px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .submit-button {
+    width: 230px;
+  }
+}
+
+@media (min-width: 576px) {
+  .contracts {
+    .generate-buttons-container {
+      .generate-buttons {
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .contracts {
+    .generate-buttons-container {
+      flex-direction: row;
+      justify-content: flex-start;
+      .generate-buttons {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        min-width: 340px;
+      }
+    }
+  }
+}

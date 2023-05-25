@@ -1,0 +1,53 @@
+.quest-address {
+  .autocomplete-input {
+    position: relative;
+    .suggestions {
+      top: 35px;
+      z-index: 99;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #c4c4c4;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 1px 1px 5px 1px #888888;
+      li {
+        padding: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(180, 197, 255);
+        }
+      }
+    }
+  }
+  .custom-control {
+    padding-left: 0.5rem !important;
+    margin-top: 0.4rem;
+    .custom-control-label {
+      font-weight: normal;
+      font-size: 12px;
+      color: #555;
+      margin-left: 1.2rem;
+      margin-top: 0.1rem;
+      &::before,
+      &::after {
+        top: 0;
+        left: -2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .quest-address {
+    .autocomplete-input {
+      .suggestions {
+        width: 95%;
+      }
+    }
+  }
+}

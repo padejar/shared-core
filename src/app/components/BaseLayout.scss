@@ -1,0 +1,57 @@
+@import "../../common/assets/scss/variables";
+
+.container.quest-app {
+  .c-app {
+    width: 100%;
+    position: relative;
+    &.authorized {
+      padding-top: 160px;
+    }
+    .c-footer {
+      border-top: unset;
+      background-color: $quest-navy;
+      p {
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        font-size: 12px;
+        text-align: center !important;
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container.quest-app {
+    .c-app {
+      &.authorized {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  html:not([dir="rtl"])
+    .c-sidebar.c-sidebar-lg-show:not(.c-sidebar-right).c-sidebar-fixed.c-sidebar-minimized
+    ~ .c-wrapper,
+  html:not([dir="rtl"])
+    .c-sidebar.c-sidebar-show:not(.c-sidebar-right).c-sidebar-fixed.c-sidebar-minimized
+    ~ .c-wrapper {
+    margin-left: 70px;
+  }
+
+  html:not([dir="rtl"])
+    .c-sidebar.c-sidebar-xxl-show:not(.c-sidebar-right).c-sidebar-fixed
+    ~ .c-wrapper,
+  html:not([dir="rtl"])
+    .c-sidebar.c-sidebar-show:not(.c-sidebar-right).c-sidebar-fixed
+    ~ .c-wrapper {
+    margin-left: 235px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .quest-app {
+    max-width: 1470px;
+  }
+}

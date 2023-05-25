@@ -1,0 +1,338 @@
+@import "../../../common/assets/scss/variables";
+@import "../../assets/scss/buttons-container";
+
+.tab-pane {
+  padding-top: 15px;
+}
+
+.application-details-content {
+  .admin-link {
+    margin-bottom: 5px;
+  }
+
+  .quest-card {
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      background-color: $quest-light-blue;
+      align-items: center;
+      padding: 1.5rem;
+      flex-direction: column;
+      .application-steps {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        li {
+          font-weight: 700;
+          text-align: center;
+          height: 69px;
+          position: relative;
+          width: 50px;
+          button,
+          .icon-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            text-decoration: none;
+            width: 100%;
+            padding: 0;
+            font-weight: bold;
+            span {
+              color: $quest-navy;
+            }
+            svg {
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          &:not(:first-child)::before {
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid $quest-navy;
+            width: 30px;
+            right: 30px;
+            top: 25px;
+            z-index: 1;
+          }
+          &:nth-child(6)::before {
+            border-bottom: 2px dashed $quest-navy;
+          }
+
+          &.active {
+            svg {
+              circle {
+                fill: $quest-green;
+              }
+              path {
+                fill: $quest-navy;
+              }
+            }
+          }
+        }
+      }
+      .application-info {
+        color: $quest-navy;
+        text-align: center;
+        .contract-no-text {
+          display: block;
+          font-weight: 700;
+        }
+      }
+    }
+    .step-header {
+      background-color: rgba(232, 252, 250, 0.6);
+      display: flex;
+      align-items: center;
+      padding: 0.9rem 2.5rem;
+      margin-bottom: 20px;
+      height: 70px;
+      img {
+        margin-right: 20px;
+        height: 48px;
+      }
+      .step-name {
+        margin-bottom: 0;
+        font-weight: bold;
+        color: $quest-navy;
+        line-height: 1.5;
+      }
+    }
+    .card-body {
+      padding-top: 10px !important;
+    }
+  }
+}
+
+.submit-button-container {
+  display: inline-block;
+  height: 38px;
+}
+
+.submit-button {
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  height: 38px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  padding: 0.3rem 0.9rem;
+  border-radius: 1.5rem;
+  min-width: 82px;
+  position: relative;
+  width: 158px;
+  background-color: $quest-navy;
+  border: 2px solid $quest-navy;
+
+  &.disabled,
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border-color: $quest-navy;
+    color: $quest-navy;
+  }
+
+  &.disallowed {
+    background-color: $quest-light-grey;
+    border-color: $quest-light-grey;
+
+    &:hover,
+    &:focus {
+      background-color: $quest-light-grey;
+      border-color: $quest-light-grey;
+      cursor: not-allowed;
+      color: #fff;
+    }
+  }
+
+  &:focus,
+  &.submitted {
+    background-color: $quest-green !important;
+    border-color: $quest-green !important;
+    color: #fff;
+  }
+
+  &.submitted {
+    padding-right: 1.7rem;
+    &::after {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      content: url("../../assets/images/icon-circle-tick.svg");
+      color: #1a0352;
+      background-color: #fff;
+      height: 29px;
+      width: 29px;
+      border-radius: 13.5px;
+    }
+  }
+}
+
+.popover-content {
+  padding: 0.9rem;
+  background-color: $quest-light-blue;
+  border-radius: 0.5rem;
+  max-width: 370px;
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.license-card-num .popover-content {
+  max-width: 390px;
+}
+
+@media (min-width: 576px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          width: 100%;
+          li {
+            &:not(:first-child)::before {
+              right: 45px;
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          li {
+            width: 85px;
+            &:not(:first-child)::before {
+              right: 60px;
+              width: 71px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        flex-direction: row;
+        .application-steps {
+          width: 75%;
+          margin-bottom: unset;
+          li {
+            &:not(:first-child)::before {
+              width: 50px;
+              right: 65px;
+            }
+          }
+        }
+        .application-info {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          li {
+            &:not(:first-child)::before {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          width: 60%;
+          li {
+            &:not(:first-child)::before {
+              width: 71px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          width: 100%;
+          li {
+            width: 85px;
+            margin-bottom: 1rem;
+            &:not(:first-child)::before {
+              width: 70px;
+              right: 40px;
+            }
+            a,
+            .icon-container {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .application-details-content {
+    .quest-card {
+      .card-header {
+        .application-steps {
+          display: inline-grid;
+          grid-template-columns: auto auto auto;
+          width: 100%;
+          li {
+            width: 85px;
+            margin-bottom: 1rem;
+            &:nth-child(4)::before {
+              border-bottom: none !important;
+            }
+            &:not(:first-child)::before {
+              width: 80px;
+              right: 50px;
+            }
+            a,
+            .icon-container {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

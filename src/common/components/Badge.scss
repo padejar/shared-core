@@ -1,0 +1,46 @@
+.quest-badge {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 12px;
+  border: 1px solid #aaaaaa;
+  color: #aaaaaa;
+
+  &::before {
+    content: "\2022";
+    font-size: 16px;
+    line-height: 16px;
+    color: #aaaaaa;
+    border-radius: 1px;
+    margin-right: 5px;
+  }
+
+  &.success {
+    border-color: #3cc13b;
+    color: #3cc13b;
+
+    &::before {
+      color: #3cc13b;
+    }
+  }
+
+  &.warning {
+    border-color: #f3bb1c;
+    color: #f3bb1c;
+
+    &::before {
+      color: #f3bb1c;
+    }
+  }
+
+  &.danger {
+    border-color: #f03738;
+    color: #f03738;
+
+    &::before {
+      color: #f03738;
+    }
+  }
+}

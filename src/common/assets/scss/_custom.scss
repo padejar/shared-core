@@ -1,0 +1,394 @@
+#root {
+  background: $quest-navy;
+}
+
+.c-app.custom {
+  background-color: $background-color;
+}
+
+.c-app.authorized {
+  background-color: $quest-navy;
+}
+
+body {
+  font-family: "Fibra One Alt Light";
+}
+
+.table-responsive {
+  overflow: visible !important;
+}
+
+label.required:after {
+  content: " *";
+  color: $quest-red;
+}
+
+.error-alert {
+  color: $quest-red;
+}
+
+.quest-form {
+  label {
+    font-weight: 600;
+    color: $quest-navy;
+  }
+  .form-control {
+    color: black;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: #05f58f !important;
+    }
+  }
+  .with-error {
+    .form-control {
+      border-color: $quest-red;
+    }
+  }
+  .has-icon {
+    position: relative;
+    .form-control {
+      padding-right: 35px;
+    }
+    img {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+    }
+  }
+}
+
+.validation-error {
+  color: $quest-red;
+  font-size: 12px;
+  text-align: left;
+}
+
+.hint {
+  color: #555555;
+  font-size: 12px;
+  text-align: left;
+}
+
+.section-header {
+  color: $quest-navy;
+}
+
+.quest-dropdown {
+  .quest-dropdown-menu {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    min-width: 5rem;
+    .quest-dropdown-item {
+      border-radius: 0.5rem;
+      color: $quest-navy;
+      background-color: #fff;
+      transition: background 0.3s, color 0.3s;
+      min-width: 150px;
+      &:hover,
+      &.active {
+        background-color: $quest-navy;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.quest-nav-pills {
+  .quest-nav-link {
+    background-color: $quest-light-grey;
+    padding: 0.5rem 1rem;
+    max-height: 37px;
+    color: $quest-navy;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: $quest-navy;
+      color: #fff;
+    }
+
+    &.active {
+      color: $quest-navy !important;
+      background-color: $quest-green !important;
+    }
+
+    @media only screen and (min-width: 1423px) {
+      min-width: 100px;
+    }
+
+    @media only screen and (max-width: 1422px) {
+      min-width: 135px;
+      max-width: 135px;
+    }
+  }
+}
+
+.quest-datatable {
+  .rdt_TableHeadRow > .rdt_TableCol {
+    padding-left: 12px;
+    padding-right: 12px;
+    > [role="columnheader"] > div {
+      color: $quest-navy !important;
+      font-weight: 600;
+    }
+  }
+  .rdt_TableCell {
+    font-size: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.quest-block-quote {
+  font-size: 40px;
+  font-family: "Street Magic";
+  color: $quest-green;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  border-color: #c4c4c4;
+  &:focus {
+    border-color: #c4c4c4;
+    box-shadow: unset;
+  }
+}
+
+.quest-multiselect {
+  .dropdown-container {
+    border-radius: 0.5rem !important;
+    border-color: #c4c4c4 !important;
+
+    .dropdown-heading {
+      height: calc(1.5em + 0.75rem + 2px) !important;
+    }
+  }
+}
+
+.quest-number-input {
+  position: relative;
+  &.currency {
+    .form-control {
+      padding-left: 1.6rem;
+    }
+    &::after {
+      content: "$";
+      color: #555555;
+      position: absolute;
+      left: 10px;
+      top: 7px;
+      font-size: 14px;
+    }
+  }
+  &.percentage {
+    .form-control {
+      padding-right: 1.6rem;
+    }
+    &::after {
+      content: "%";
+      color: #555555;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      font-size: 14px;
+    }
+  }
+}
+
+.custom-checkbox {
+  .custom-control-label::before {
+    border-radius: 0.15rem !important;
+  }
+}
+
+.quest-checkbox:checked ~ .custom-control-label::before {
+  border-color: $quest-navy;
+  background-color: $quest-navy;
+}
+
+.quest-checkbox:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #c4c4c4;
+}
+
+.quest-checkbox:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 1px 10px rgba(229, 229, 229, 1);
+}
+
+.percentage-field {
+  text-align: right;
+}
+
+.btn-link {
+  color: $quest-navy;
+  text-decoration: underline;
+  padding: 0;
+  display: inline-block;
+  &:hover {
+    color: $quest-navy;
+  }
+}
+
+.quest-card {
+  border: unset;
+  border-radius: 10px;
+  position: relative;
+  .card-header {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+.quest-amount-financed {
+  font-family: "Open Sans Regular";
+}
+
+.quest-sidebar-toggler {
+  background: none;
+  border: none;
+  border-radius: 0.4rem;
+  padding: unset;
+  position: relative;
+  outline: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+
+  &.no-hover {
+    &:hover {
+      background: none;
+      svg {
+        path {
+          fill: $quest-green;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &.hover {
+    background-color: $quest-green;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.quest-page-header-section {
+  margin-bottom: 2.5rem;
+  .quest-header-text {
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+}
+
+.banner-container {
+  position: fixed;
+  z-index: 1030;
+  left: 0;
+  width: 100%;
+}
+
+.quest-header {
+  min-height: 80px;
+  display: block;
+  .quest-header-logo-container {
+    padding-left: 1rem;
+  }
+  .return-to-dashboard,
+  .dropdown-user {
+    display: inline-block;
+  }
+  .c-header-nav-link {
+    svg {
+      rect {
+        fill: #fff;
+        transition: fill 0.3s ease;
+      }
+      path {
+        fill: $quest-navy;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover {
+        rect {
+          fill: $quest-navy;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .header-nav-link {
+    font-size: 14px;
+  }
+
+  .c-header-nav.links {
+    justify-content: flex-end;
+  }
+
+  &.one-banner {
+    top: 21px;
+  }
+
+  &.two-banner {
+    top: 42px;
+  }
+}
+
+.right-border {
+  border-right: 1px solid $quest-light-grey;
+}
+
+@media (min-width: 768px) {
+  .quest-card {
+    .card-body {
+      padding: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .quest-header-logo-container {
+    padding-left: 2rem !important;
+  }
+  .header-search-container {
+    min-width: 20rem;
+    padding: 0;
+  }
+  .header-nav {
+    display: flex;
+  }
+  .quest-header {
+    display: flex;
+    .return-to-dashboard,
+    .dropdown-user {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .quest-header {
+    max-width: 1440px;
+    width: 100%;
+    left: 50% !important;
+    transform: translate(-50%);
+  }
+  .banner-container {
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 1440px;
+  }
+}

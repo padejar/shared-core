@@ -1,0 +1,66 @@
+@import "../../../assets/scss/popover-info";
+
+.notes-form {
+  .supporting-notes {
+    margin-bottom: 1rem;
+  }
+  .info {
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: $quest-navy;
+    border-radius: 0.6rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: 0.9;
+    margin-left: 0.2rem;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  #button-upload {
+    width: 177px;
+  }
+  .info-container {
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .bank-statement-container {
+    margin-bottom: 2.5rem;
+    #bank-statement-url {
+      &:read-only {
+        background-color: #fff !important;
+      }
+    }
+  }
+  .custom-control {
+    .custom-control-input:focus {
+      outline: unset;
+    }
+    .custom-control-label {
+      &::before,
+      &::after {
+        left: -2.65rem !important;
+      }
+    }
+  }
+  .custom-checkbox {
+    margin-right: 0;
+    .custom-control-label {
+      font-weight: normal;
+      margin-left: 1.75rem;
+      a {
+        color: #555 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.btn-upload-popover {
+  background-color: $quest-light-blue;
+  padding: 1.4rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 460px;
+}

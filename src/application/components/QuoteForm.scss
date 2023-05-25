@@ -1,0 +1,35 @@
+@import "../assets/scss/popover-info";
+
+.quote-form {
+  .form-section {
+    .financier-group {
+      display: flex;
+      > .quest-number-input {
+        margin-right: 10px;
+        display: inline-block;
+        max-width: 40% !important;
+      }
+    }
+
+    .divider {
+      margin-top: 1.75rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .popover-info {
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+  }
+  .popover-content {
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1400px) {
+  .quote-form {
+    .output-section {
+      padding-left: 100px;
+    }
+  }
+}

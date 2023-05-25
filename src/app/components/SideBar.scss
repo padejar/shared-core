@@ -1,0 +1,116 @@
+@import "../../common/assets/scss/variables";
+
+.quest-sidebar {
+  top: 0 !important;
+  background-color: #311c63;
+  width: 235px !important;
+
+  .quest-sidebar-toggler {
+    position: absolute;
+    top: 2rem;
+    left: 27px;
+  }
+
+  .quest-sidebar-header {
+    padding: 20px 27px;
+    opacity: 1;
+    transition: opacity 0.15s;
+    border-bottom: 1px solid rgba(209, 250, 245, 0.1);
+  }
+  .quest-sidebar-footer {
+    padding: 20px 27px;
+    border-top: 1px solid rgba(209, 250, 245, 0.1);
+    opacity: 1;
+    transition: opacity 0.15s;
+  }
+  .quest-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 27px;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.15s;
+    .quest-sidebar-nav-item {
+      width: 100%;
+      a.quest-sidebar-nav-link {
+        font-weight: 600;
+        color: #fff;
+        display: flex;
+        flex: 1 1;
+        align-items: center;
+        padding: 0.8445rem 1rem;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 10px;
+        &:hover,
+        &.active {
+          background-color: $quest-red;
+        }
+        i::before {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .quest-sidebar-info {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+
+    &.small {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
+  a.quest-sidebar-info {
+    text-decoration: underline;
+  }
+
+  .quest-sidebar-user-details {
+    margin-top: 77px;
+  }
+
+  &.c-sidebar-minimized {
+    background-color: $quest-navy;
+    .quest-sidebar-header,
+    .quest-sidebar-nav,
+    .quest-sidebar-footer {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html:not([dir="rtl"]) .c-sidebar.c-sidebar-fixed:not(.c-sidebar-right) {
+    left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .quest-sidebar {
+    top: 5.1rem !important;
+    &.c-sidebar-minimized.c-sidebar-fixed {
+      width: 70px !important;
+    }
+
+    &.one-banner {
+      top: 6.3rem !important;
+    }
+
+    &.two-banner {
+      top: 7.6rem !important;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  html:not([dir="rtl"]) .c-sidebar.c-sidebar-fixed:not(.c-sidebar-right) {
+    left: auto;
+  }
+}

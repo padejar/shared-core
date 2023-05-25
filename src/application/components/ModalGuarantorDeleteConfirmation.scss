@@ -1,0 +1,38 @@
+@import "../../common/assets/scss/variables";
+
+.modal-guarantor-delete-confirmation {
+  .modal-dialog {
+    .modal-content {
+      border-radius: 0.75rem;
+      border-color: $quest-red;
+      border-width: 4px;
+      .modal-body {
+        position: relative;
+        text-align: center;
+        padding: 2rem 2.5rem;
+        .btn-close {
+          position: absolute;
+          right: 5px;
+          top: -2px;
+          border: unset;
+          color: $quest-red;
+          background-color: transparent;
+          font-size: 22px;
+          padding: 5px;
+          line-height: 22px;
+          &:focus {
+            outline: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .model-guarantor-delete-confirmation {
+    .modal-dialog {
+      max-width: 600px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+import { Dictionary } from "../../common/types/Dictionary";
+
+export enum GUARANTOR_ASSET_TYPES {
+  CASH = "CASH",
+  PROPERTY = "PROPERTY",
+  INVESTMENT_PROPERTY = "INVESTMENT_PROPERTY",
+  VEHICLE = "VEHICLE",
+  HOUSEHOLD_PERSONAL = "HOUSEHOLD_PERSONAL",
+  OTHER = "OTHER",
+}
+
+export const GUARANTOR_ASSET_TYPE_LABELS: Dictionary = {
+  [GUARANTOR_ASSET_TYPES.CASH]: "Cash",
+  [GUARANTOR_ASSET_TYPES.PROPERTY]: "Property",
+  [GUARANTOR_ASSET_TYPES.INVESTMENT_PROPERTY]: "Investment property",
+  [GUARANTOR_ASSET_TYPES.VEHICLE]: "Vehicle",
+  [GUARANTOR_ASSET_TYPES.HOUSEHOLD_PERSONAL]: "Household & personal asset",
+  [GUARANTOR_ASSET_TYPES.OTHER]: "Other asset",
+};

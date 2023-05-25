@@ -1,0 +1,98 @@
+@import "../../../common/assets/scss/variables";
+
+.modal-glass-guide {
+  .modal-dialog {
+    .modal-content {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      header {
+        border-bottom: none;
+        background-color: $quest-navy;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        h3 {
+          text-align: center;
+          color: #fff;
+          margin-bottom: 0;
+        }
+        .btn-close {
+          position: absolute;
+          right: 5px;
+          top: 3px;
+          border: unset;
+          color: $quest-red;
+          background-color: transparent;
+          font-size: 22px;
+          padding: 5px;
+          line-height: 22px;
+          &:focus {
+            outline: unset;
+          }
+        }
+      }
+      .modal-body {
+        padding: 1;
+        .note {
+          font-size: 12px;
+        }
+        .table-container {
+          position: relative;
+          .pricing {
+            > thead {
+              > tr {
+                > th {
+                  background-color: $quest-light-blue;
+                  border-top: none;
+                  border-bottom: none;
+                  color: $quest-navy;
+                  &:first-child {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                  }
+                  &:last-child {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                  }
+                }
+              }
+            }
+            > tbody {
+              > tr {
+                border-color: #e5e5e5;
+                > td {
+                  color: $quest-navy;
+                }
+                &:first-child {
+                  > td {
+                    border-top: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-glass-guide {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          padding: 1rem 5rem;
+        }
+      }
+    }
+  }
+}
